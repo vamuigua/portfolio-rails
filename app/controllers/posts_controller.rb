@@ -1,26 +1,35 @@
 class PostsController < ApplicationController
 
-	def index
-	end
+	before_action :find_post, only:[:show,:edit,:update,:destroy]
 
-	def new
-		#create a new post in the form
-		@post = Post.new
-	end
+  def index
+  end
 
-	def create 
-		@post = Post.new(post_params)
+  def new
+    #create a new post in the form
+    @post = Post.new
+  end
 
-		if @post.save
-			redirect_to @post, notice:"Article was successfully saved!"
-		else
-			render 'new',notice:"Unable to save your post."
-		end
-	end
+  def create
+    @post = Post.new(post_params)
 
-	private
+    if @post.save
+      redirect_to @post, notice:"Article was successfully saved!"
+    else
+      render 'new',notice:"Unable to save your post."
+    end
+  end
 
-	def post_params
-		params.require(:post).permit(:title,:content)
-	end
+  def show
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title,:content)
+  end
+
+  def find_post
+    @post = Post.find(params[:id])
+  end
 end
