@@ -49,3 +49,9 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+ 
+
+#A fast, safe and extensible Markdown to (X)HTML parser
+gem 'redcarpet'
+#pygments.rb exposes the pygments syntax highlighter to Ruby
+gem 'pygments.rb'
