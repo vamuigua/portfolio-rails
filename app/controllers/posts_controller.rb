@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-	before_action :find_post, only:[:show,:edit,:update,:destroy]
+  before_action :find_post, only:[:show,:edit,:update,:destroy]
 
   def index
   end
@@ -21,6 +21,17 @@ class PostsController < ApplicationController
   end
 
   def show
+  end
+
+  def edit
+  end
+
+  def update
+    if @post.update(post_params)
+      redirect_to @post, notice:"Article was successfully saved!"
+    else
+      render 'edit', notice:"Unable to save your article."
+    end
   end
 
   private
