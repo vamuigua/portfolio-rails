@@ -5,11 +5,11 @@ class PostsController < ApplicationController
 
 	def new
 		#create a new post in the form
-		@posts = Post.new
+		@post = Post.new
 	end
 
-	def create
-		@posts = Post.new(post_params)
+	def create 
+		@post = Post.new(post_params)
 
 		if @post.save
 			redirect_to @post, notice:"Article was successfully saved!"
