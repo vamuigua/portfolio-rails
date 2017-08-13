@@ -1,4 +1,17 @@
-<h2>Hello World</h2>
-<p>
-  The time is now: <%= Time.now %>
-</p>
+<div class="wrapper wrapper_padding clearfix">
+	<div class="col-1 about homepage_content">
+		<h2>About</h2>
+		<hr>
+		<p>I'm a designer &amp; developer living in Nairobi,Kenya.</p>
+		<p>By day I work as a Full Stack Developer, by night I teach myself how to design &amp; code rails applications</p>
+		<p>You can find me on Twitter, Medium and sharing some code on Github.</p>
+	</div>
+	<div class="col-2 homepage_content">
+		<h2>Stuff I've Written</h2>
+		<hr>
+		<% @posts.each do |post| %>
+		<h3><a href="#"><%= link_to post.title, post %></a></h3>
+		<p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+		<% end %>
+	</div>
+</div>
