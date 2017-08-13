@@ -1,4 +1,4 @@
-// @import "normalize";
+@import "normalize";
 
 $dark: #424652;
 $white: #FFFFFF;
@@ -198,6 +198,7 @@ input[type="submit"], .button {
     text-align: center;
 }
 
-// @import "welcome";
-// @import "posts_projects";
+@import "welcome";
+@import "posts_projects";
+
 // @import "pygments";
