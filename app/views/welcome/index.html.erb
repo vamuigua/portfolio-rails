@@ -7,6 +7,7 @@
 		<p>A Tech enthusiast, Lover of Music 🎶 and Gaming 🎮</p>
 		<p>You can find me on Twitter, Medium and sharing some code on Github.</p>
 	</div>
+	<!--POSTS-->
 	<div class="col-2 homepage_content">
 		<h2>Stuff I've Written</h2>
 		<hr>
@@ -15,4 +16,14 @@
 		<p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
 		<% end %>
 	</div>
+	<!--PROJECTS-->
+	<div class="col-2 homepage_content">
+		<h2>Stuff I've Built</h2>
+		<hr>
+		<% @projects.each do |project| %>
+		<h3><a href="#"><%= link_to project.title, project %></a></h3>
+		<p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
+		<% end %>
+	</div>
+
 </div>
