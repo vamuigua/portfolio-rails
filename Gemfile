@@ -55,3 +55,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'redcarpet'
 #pygments.rb exposes the pygments syntax highlighter to Ruby
 gem 'pygments.rb'
+#It allows you to create pretty URL’s and work with human-friendly strings as if they were numeric ids for ActiveRecord models
+gem 'friendly_id', '~> 5.1'
