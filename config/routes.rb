@@ -7,4 +7,6 @@ Rails.application.routes.draw do
 
   #routes to posts
   resources :posts
+  #routes to projects
+  resources :projects 
 end
