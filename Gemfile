@@ -66,3 +66,5 @@ gem 'will_paginate', '~> 3.1', '>= 3.1.5'
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
 #to securely configure Rails applications
 gem 'figaro', '~> 1.0.0'
+#authentication
+gem 'devise', '~> 4.2'
