@@ -7,7 +7,10 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   #routes to posts
-  resources :posts
+  resources :posts, only:[:index,:show]
+  namespace :admin do
+    resources :posts
+  end
   #routes to projects
   resources :projects 
   #routes to contacts
