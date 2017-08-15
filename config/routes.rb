@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   resources :posts
   #routes to projects
   resources :projects 
+  #routes to contacts
+  resources :contacts, only:[:new,:create]
 end
