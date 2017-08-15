@@ -60,3 +60,6 @@ gem 'friendly_id', '~> 5.1'
 
 #will_paginate provides a simple API for performing paginated queries with Active Record, DataMapper and Sequel, and includes helpers for rendering pagination links in Rails, Sinatra and Merb web apps
 gem 'will_paginate', '~> 3.1', '>= 3.1.5'
+
+#Send e-mail straight from forms in Rails with I18n, validations, attachments and request information
+gem 'mail_form', '~> 1.5', '>= 1.5.1'
