@@ -18,7 +18,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to @post, notice:"Article was successfully saved!"
     else
-      render 'new',notice:"Unable to save your post."
+      render 'new',alert:"Unable to save your post."
     end
   end
 
@@ -32,7 +32,7 @@ class PostsController < ApplicationController
     if @post.update(post_params)
       redirect_to @post, notice:"Article was successfully saved!"
     else
-      render 'edit', notice:"Unable to save your article."
+      render 'edit', alert:"Unable to save your article."
     end
   end
 
