@@ -8,8 +8,10 @@ Rails.application.routes.draw do
 
   #routes to posts
   resources :posts, only:[:index,:show]
+  #admin routes
   namespace :admin do
     resources :posts
+    resources :projects
   end
   #routes to projects
   resources :projects 
