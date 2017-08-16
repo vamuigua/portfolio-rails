@@ -1,5 +1,5 @@
 class Admin::ProjectsController < AdminController
-  before_action :find_projects, only:[:show,:edit,:update,:destroy]
+  before_action :find_project, only:[:show,:edit,:update,:destroy]
 
   def index
     @projects = Project.all.order("created_at desc").paginate(:page => params[:page], :per_page => 3)
@@ -14,7 +14,7 @@ class Admin::ProjectsController < AdminController
     @project = Project.new(project_params)
 
     if @project.save
-      redirect_to admin_project_path(@project), notice:"Project was successfully saved!"
+      redirect_to project_path(@project), notice:"Project was successfully saved!"
     else
       render 'new',alert:"Unable to save your project."
     end
@@ -28,7 +28,7 @@ class Admin::ProjectsController < AdminController
 
   def update
     if @project.update(project_params)
-      redirect_to admin_project_path(@project), notice:"Project was successfully saved!"
+      redirect_to project_path(@project), notice:"Project was successfully saved!"
     else
       render 'edit', alert:"Unable to save your project."
     end
@@ -36,7 +36,7 @@ class Admin::ProjectsController < AdminController
 
   def destroy
     @project.destroy
-    redirect_to admin_projects_path,alert:"Successfully deleted project"
+    redirect_to projects_path,alert:"Successfully deleted project"
   end
 
   private

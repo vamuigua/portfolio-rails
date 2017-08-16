@@ -14,7 +14,7 @@ class Admin::PostsController < AdminController
     @post = Post.new(post_params)
 
     if @post.save
-      redirect_to admin_post_path(@post), notice:"Article was successfully saved!"
+      redirect_to post_path(@post), notice:"Article was successfully saved!"
     else
       render 'new',alert:"Unable to save your post."
     end
@@ -28,7 +28,7 @@ class Admin::PostsController < AdminController
 
   def update
     if @post.update(post_params)
-      redirect_to admin_post_path(@post), notice:"Article was successfully saved!"
+      redirect_to post_path(@post), notice:"Article was successfully saved!"
     else
       render 'edit', alert:"Unable to save your article."
     end
@@ -36,7 +36,7 @@ class Admin::PostsController < AdminController
 
   def destroy
   	@post.destroy
-  	redirect_to admin_posts_path,alert:"Successfully deleted post"
+  	redirect_to posts_path,alert:"Successfully deleted post"
   end
 
   private
