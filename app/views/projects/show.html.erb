@@ -11,9 +11,9 @@
 	<div class="button_wrapper">
 		<a href="<%= @project.link %>" class="project_button" target="_blank">Visit <%=@project.title %></a>
 	</div>
-	<%if user_signed_in?%>
+	<%if current_user && current_user.is_admin?%>
 	<div id="admin_links">
-		<%= link_to "Edit Project", edit_project_path(@project) %>
-		<%= link_to "Delete Project", project_path(@project), method: :delete, data:{confirm:"Are you sure you want to delete this project?"}%>
+		<%= link_to "Edit Project", edit_admin_project_path(@project) %>
+		<%= link_to "Delete Project", admin_project_path(@project), method: :delete, data:{confirm:"Are you sure you want to delete this project?"}%>
 	</div>
 	<%end%>
