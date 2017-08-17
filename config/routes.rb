@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'comments/index'
+
+  get 'comments/new'
+
   devise_for :users
   #my root page
   root 'welcome#index'
