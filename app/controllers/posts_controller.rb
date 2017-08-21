@@ -8,15 +8,19 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = Post.find(params[:id])
+    @commentable = @post
+    @comments = @commentable.comments
+    @comment = Comment.new
   end
 
   private
 
   def post_params
-    params.require(:post).permit(:title,:content,:slug)
+    params.require(:post).permit(:title,:content)
   end
 
   def find_post
-    @post = Post.friendly.find(params[:id])
+    @post = Post.find(params[:id])
   end
 end

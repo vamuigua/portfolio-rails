@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'comments/index'
-
-  get 'comments/new'
-
   devise_for :users
   #my root page
   root 'welcome#index'
@@ -11,7 +7,13 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   #routes to posts
-  resources :posts, only:[:index,:show]
+  resources :posts, only:[:index,:show] do
+    resources :comments
+  end
+
+  resources :comments do
+    resources :comments
+  end
   #admin routes
   namespace :admin do
     resources :posts

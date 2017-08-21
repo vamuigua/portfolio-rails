@@ -1,0 +1,19 @@
+<div class="skinny_wrapper wrapper_padding">
+<%= form_for [@commentable, Comment.new] do |f| %>
+
+<% if @comment.errors.any? %>
+<div class="error_messages">
+  <h2>Please correct the following errors.</h2>
+  <ul>
+    <% @comment.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<%= f.label :content,"Write your comment here" %><br>
+<%= f.text_area :content %>
+<%= f.submit %>
+
+<% end %>
+</div>
