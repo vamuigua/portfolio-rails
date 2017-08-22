@@ -23,4 +23,5 @@ Rails.application.routes.draw do
   resources :projects 
   #routes to contacts
   resources :contacts, only:[:new,:create]
+  resources :referals
 end
