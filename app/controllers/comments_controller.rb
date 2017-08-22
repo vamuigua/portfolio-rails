@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = @commentable.comments.new(params[:comment_params])
+    @comment = @commentable.comments.create(params[:comment].permit(:content))
     if @comment.save
       redirect_to @commentable, notice: "Comment created."
     else
@@ -23,9 +23,5 @@ class CommentsController < ApplicationController
   def load_commentable
     resource, id = request.path.split('/')[1,2] #posts/1
     @commentable = resource.singularize.classify.constantize.find(id)
-  end
-
-  def comment_params
-    params.require(:comment).permit(:content)
   end
 end
