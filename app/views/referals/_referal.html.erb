@@ -1,0 +1,8 @@
+<%= form_for referal do |f|%>
+<%= f.label :Content,referal.body %><br>
+<%if current_user && current_user.is_admin?%>
+<%= link_to "Remove Referal", referal, method: :delete, data: {confirm: "Are you sure?"}, remote: true %>
+<%end%>
+<br>
+<hr>
+<%end%>

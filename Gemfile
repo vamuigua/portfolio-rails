@@ -68,3 +68,5 @@ gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem 'figaro', '~> 1.0.0'
 #authentication
 gem 'devise', '~> 4.2'
+
+gem 'jquery-rails'

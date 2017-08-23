@@ -1,0 +1,18 @@
+<div class="skinny_wrapper wrapper_padding">
+	<%= form_for @referal, remote:true do |f| %>
+	<% if @referal.errors.any? %>
+	<h2><%= pluralize(@referal.errors.count,"error")%> prevented this referal from saving:</h2>
+	<ul>
+		<% @referal.errors.full_messages.each do |msg|%>
+		<li><%= msg %></li>
+		<%end%>
+	</ul>
+	<%end%>
+	
+	<%= f.label :Content %><br>
+	<%= f.text_field :body%>
+	<br>
+	<br>
+	<%= f.submit %>
+	<%end%>
+</div>
