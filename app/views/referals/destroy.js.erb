@@ -1,1 +1,3 @@
-$('#edit_referal_<%= @referal.id %>').remove();
+$('.delete_referal_link').bind('ajax:success', function(){
+	$(this).closest('p').fadeOut();
+});

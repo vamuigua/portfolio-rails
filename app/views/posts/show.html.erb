@@ -23,7 +23,6 @@
 		<a onclick="javascript:window.open('https://plus.google.com/share?url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-google-plus"></i></a>
 	</div>
 	<hr>
-	<%= link_to "New Comment", new_comment_path, id:"new_comment_link"%>
+	<%= link_to "New Comment", new_post_comment_path(@post), id:"new_comment_link", remote: true%>
 	<%= render "comments/comments" %>
-	<%= render "comments/form" %>
 </div>

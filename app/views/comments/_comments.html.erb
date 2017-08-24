@@ -2,11 +2,7 @@
 	<h1>Comments</h1>
 	<% if @comments.any? %>
 	<div id="comments">
-		<% @comments.each do |comment| %>
-		<div class="comment">
-			<%= simple_format comment.content%>
-		</div>
-		<% end %>
+		<%= render @comments %>
 	</div>
 	<%else%>
 	<h1>No comments Found!</h1>
