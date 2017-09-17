@@ -16,22 +16,27 @@
 		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 	</head>
 	<body>
+		
+		<!--NAVBAR SCROLL-->
 		<header id="main_navigation" class="clearfix">
 			<%= link_to "Victor Allen", root_path, class: "name" %>
 			<nav>
-				<%= link_to "Articles", posts_path %>
-				<%= link_to "Projects", projects_path %>
-				<%= link_to "Contact", new_contact_path %>
-				<%= link_to "Referals", referals_path %>
-				<%if user_signed_in?%>
-				<%= link_to "Sign Out", destroy_user_session_path, method: :delete%>
-				<%else%>
-				<%= link_to "Sign in", new_user_session_path%>
-				<%= link_to "Sign Up", new_user_registration_path%>
-				<%end%>
+				<ul id="meshow" class="dropdown-content">
+					<li><%= link_to "Articles", posts_path %></li>
+					<li><%= link_to "Projects", projects_path %></li>
+					<li><%= link_to "Contact", new_contact_path %></li>
+					<li><%= link_to "Referals", referals_path %></li>
+					<%if user_signed_in?%>
+					<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete%></li>
+					<%else%>
+					<li><%= link_to "Sign in", new_user_session_path%></li>
+					<li><%= link_to "Sign Up", new_user_registration_path%></li>
+					<%end%>
+				</ul>
+				<div onclick="myFunction()" class="handle"><i class="fa fa-bars" aria-hidden="true"></i>&nbsp;Menu</div>
 			</nav>
-			<!--NAVBAR SCROLL-->
 		</header>
+		
 		<%if notice%>
 		<p class="notice"><%= notice %></p>
 		<% elsif alert

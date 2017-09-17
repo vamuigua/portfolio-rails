@@ -17,6 +17,26 @@
 //= require jquery_ujs
 //= require_tree .
 
+/****NAVIGATION BAR CLICK FUNCTION(on Mobile)***************/
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("meshow").classList.toggle("showing");
+}
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches(".handle")) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('showing')) {
+                openDropdown.classList.remove('showing');
+            }
+        }
+    }
+}
+
 /*****BACK TO TOP FUNCTION*********/
 jQuery(document).ready(function($) {
     // browser window scroll (in pixels) after which the "back to top" link is shown
