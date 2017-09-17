@@ -131,7 +131,7 @@ nav ul li:hover {
     display: none;
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1044px) {
     nav ul {
         max-height: 0px;
     }
@@ -186,7 +186,7 @@ nav ul li:hover {
             font-size: 1.2rem;
         }
 
-        @media screen and (max-width: 1125px) {
+        @media screen and (max-width: 1255px) {
             width: 100%;
         }
     }
@@ -201,7 +201,8 @@ nav ul li:hover {
 }
 
 #main_footer {
-    padding: 2.5em 5%;
+    margin-top: 1.5em;
+    padding: 3.5em 5%;
     border-top: 1px solid $border;
 
     .copyright {
@@ -210,8 +211,13 @@ nav ul li:hover {
         margin: 0;
     }
 
+    .email {
+        margin: 10px auto;
+    }
+
     nav {
         float: right;
+        padding-right: 50px;
 
         i {
             color: $dark;
