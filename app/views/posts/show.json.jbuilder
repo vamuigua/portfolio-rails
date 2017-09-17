@@ -1,0 +1,1 @@
+json.extract! @item, :id, :title,:content,:postimage :created_at, :updated_at
