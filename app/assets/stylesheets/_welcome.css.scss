@@ -5,11 +5,23 @@
 .col-1 {
     width: 45%;
     padding: 0 5% 0 2.5%;
+
+    @media only screen and (max-width: 760px) {
+        width: 100%;
+    }
 }
 
 .col-2, .col-3 {
     width: 27.5%;
     padding: 0 2.5%;
+
+    @media only screen and (max-width: 760px) {
+        width: 50%;
+    }
+
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+    }
 }
 
 .homepage_content {
