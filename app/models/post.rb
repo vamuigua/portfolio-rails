@@ -1,6 +1,5 @@
 class Post < ApplicationRecord
-  # extend FriendlyId
-  # friendly_id :id, use: :slugged
+  mount_uploader :postimage, PostimageUploader
   #post having many comments as commentale
   has_many :comments, as: :commentable
 end
