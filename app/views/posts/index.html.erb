@@ -1,7 +1,7 @@
 <h1 id="page_title">Stuff I've Written</h1>
 <div id="posts_wrapper" class="skinny_wrapper">
 <%if current_user && current_user.is_admin? %>
-<%= link_to "New Post", new_admin_post_path%>
+<%= link_to "New Post", new_admin_post_path ,id:"new_comment_link"%>
 <%end%>
 	<% @posts.each do |post| %>
 	<div class="post">
