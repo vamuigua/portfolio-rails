@@ -10,19 +10,19 @@
 	<%end%>
 	
 	<%= f.label :title %><br>
-	<%= f.text_field :title%>
+	<%= f.text_field :title,:required => true%>
 
 	<br>
 	<br>
 
 	<%= f.label :link,"Write your link here" %><br>
-	<%= f.text_field :link%>
+	<%= f.text_field :link,:required => true%>
 
 	<br>
 	<br>
 
 	<%= f.label :description %><br>
-	<%= f.text_area :description%>
+	<%= f.text_area :description,:required => true%>
 
 	<br>
 	<br>

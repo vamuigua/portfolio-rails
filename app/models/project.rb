@@ -1,4 +1,3 @@
 class Project < ApplicationRecord
-	extend FriendlyId
-	friendly_id :title, use: :slugged
+	validates :title, :description,:link, presence: true
 end
