@@ -44,6 +44,13 @@ body {
     border: 2px solid red;
 }
 
+#new_referal_link {
+    text-decoration: none;
+    color: black;
+    border: 2px solid $border;
+    padding: 10px;
+}
+
 .wrapper {
     width: 90%;
     margin: 0 auto;
