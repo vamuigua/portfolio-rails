@@ -1,4 +1,6 @@
 <p>
 	<%= comment.content%>
+	<br>
+	<br>
 	<%= link_to "Delete Comment",[comment.commentable, comment],method: :delete, data:{confirm:'Are you sure?'}, remote: true, class: 'delete_comment_link'%>
 </p>

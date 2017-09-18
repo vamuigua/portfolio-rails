@@ -14,6 +14,36 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+#new_comment_link {
+    text-decoration: none;
+    color: black;
+    border: 2px solid $border;
+    padding: 10px;
+}
+
+#new_comment_link:hover {
+    color: black;
+    background-color: $border;
+}
+
+#cancel_link {
+    text-decoration: none;
+    color: black;
+    border: 2px solid $border;
+    padding: 5px 10px;
+}
+
+.delete_comment_link {
+    text-decoration: none;
+    color: black;
+    border: 2px solid $border;
+    padding: 5px 10px;
+}
+
+.delete_comment_link:hover {
+    border: 2px solid red;
+}
+
 .wrapper {
     width: 90%;
     margin: 0 auto;

@@ -1,10 +1,11 @@
 <div class="skinny_wrapper wrapper_padding">
 	<h1>Comments</h1>
+	<hr style="width: 100%">
 	<% if @comments.any? %>
 	<div id="comments">
 		<%= render @comments %>
 	</div>
 	<%else%>
-	<h1>No comments Found!</h1>
+	<h4>Be the First to comment! 😊</h4>
 	<%end%>
 </div>
