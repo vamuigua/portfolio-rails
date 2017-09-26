@@ -65,3 +65,124 @@
         text-decoration: none;
     }
 }
+
+h3 {
+    font-size: 1.2em;
+}
+
+// Progress Bars
+progress, progress[role] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background-size: auto;
+    height: 30px;
+    width: 100%;
+}
+
+// The unordered list
+.skill-list {
+    list-style: none;
+    margin: 0;
+    padding: 1em;
+}
+
+// The list item
+.skill {
+    padding-bottom: 30px;
+    margin-bottom: 1em;
+    position: relative;
+
+    h3 {
+        color: #000000;
+        left: 1em;
+        line-height: 1;
+        position: absolute;
+        top: 1em;
+        margin-top: 30px;
+    }
+
+    ::-webkit-progress-value {
+        -webkit-animation: bar-fill 2s;
+        width: 0px;
+    }
+}
+
+// Style the bar colors
+.skill-1::-webkit-progress-value {
+    background: #FF397B;
+}
+
+.skill-1::-moz-progress-bar {
+    background: #FF397B;
+}
+
+.skill-2::-webkit-progress-value {
+    background: #1085FF;
+}
+
+.skill-2::-moz-progress-bar {
+    background: #1085FF;
+}
+
+.skill-3::-webkit-progress-value {
+    background: #FFC911;
+}
+
+.skill-3::-moz-progress-bar {
+    background: #FFC911;
+}
+
+.skill-4::-webkit-progress-value {
+    background: #3A7C5A;
+}
+
+.skill-4::-moz-progress-bar {
+    background: #3A7C5A;
+}
+
+.skill-5::-webkit-progress-value {
+    background: #FFA932;
+}
+
+.skill-5::-moz-progress-bar {
+    background: #FFA932;
+}
+
+.skill-6::-webkit-progress-value {
+    background: #FB2133;
+}
+
+.skill-6::-moz-progress-bar {
+    background: #FB2133;
+}
+
+.skill-7::-webkit-progress-value {
+    background: #87FF69;
+}
+
+.skill-7::-moz-progress-bar {
+    background: #87FF69;
+}
+
+.skill-8::-webkit-progress-value {
+    background: #606FFA;
+}
+
+.skill-8::-moz-progress-bar {
+    background: #606FFA;
+}
+
+// Animation Keyframes
+@-webkit-keyframes bar-fill {
+    0% {
+        width: 0;
+    }
+}
+
+@keyframes bar-fill {
+    0% {
+        width: 0;
+    }
+}
