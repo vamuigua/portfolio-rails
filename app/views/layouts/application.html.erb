@@ -28,12 +28,6 @@
 					<!-- <li><a href="#skills">&lt;Skills&gt;</a></li> -->
 					<li><%= link_to "<Contact>", new_contact_path %></li>
 					<li><%= link_to "<Referals>", referals_path %></li>
-					<%if user_signed_in?%>
-					<li><%= link_to "<Sign Out>", destroy_user_session_path, method: :delete%></li>
-					<%else%>
-					<li><%= link_to "<Sign in>", new_user_session_path%></li>
-					<li><%= link_to "<Sign Up>", new_user_registration_path%></li>
-					<%end%>
 				</ul>
 				<div onclick="myFunction()" class="handle"><i class="fa fa-bars" aria-hidden="true"></i>&nbsp;Menu</div>
 			</nav>
