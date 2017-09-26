@@ -1,93 +1,95 @@
-<div id="loader-wrapper">
-	<div id="loader"></div>
-	<div class="loader-section section-left"></div>
-	<div class="loader-section section-right"></div>
-</div>
-<div class="wrapper wrapper_padding clearfix">
-	<div class="col-1 about homepage_content">
-		<h2>About</h2>
-		<hr>
-		<h2>Hi there, am VICTOR.</h2>
-		<p><b>Designer</b> &amp; <b>Developer</b> living in Nairobi,Kenya.</p>
-		<p>By day I work as a <b>Full Stack Developer</b>, by night I teach myself how to design &amp; code <b>Web applications.</b></p>
-		<p>A <i>Tech enthusiast</i> 💻, <i>Lover of Music</i> 🎶 and <i>Games</i> 🎮</p>
-		<p>You can find me on Twitter, Medium, Linkedin and sharing some code on Github.</p>
+<div class="home">
+	<div id="loader-wrapper">
+		<div id="loader"></div>
+		<div class="loader-section section-left"></div>
+		<div class="loader-section section-right"></div>
 	</div>
-	<!--POSTS-->
-	<div class="col-2 homepage_content">
-		<h2>Stuff I've Written</h2>
-		<hr>
-		<% @posts.each do |post| %>
-		<h3><a href="#"><%= link_to post.title, post %></a></h3>
-		<p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
-		<% end %>
+	<div class="wrapper wrapper_padding clearfix">
+		<div class="col-1 about homepage_content">
+			<h2>About</h2>
+			<hr>
+			<h2>Hi there, am VICTOR.</h2>
+			<p><b>Designer</b> &amp; <b>Developer</b> living in Nairobi,Kenya.</p>
+			<p>By day I work as a <b>Full Stack Developer</b>, by night I teach myself how to design &amp; code <b>Web applications.</b></p>
+			<p>A <i>Tech enthusiast</i> 💻, <i>Lover of Music</i> 🎶 and <i>Games</i> 🎮</p>
+			<p>You can find me on Twitter, Medium, Linkedin and sharing some code on Github.</p>
+		</div>
+		<!--POSTS-->
+		<div class="col-2 homepage_content">
+			<h2>Stuff I've Written</h2>
+			<hr>
+			<% @posts.each do |post| %>
+			<h3><a href="#"><%= link_to post.title, post %></a></h3>
+			<p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+			<% end %>
+		</div>
+		<!--PROJECTS-->
+		<div class="col-2 homepage_content">
+			<h2>Stuff I've Built</h2>
+			<hr>
+			<% @projects.each do |project| %>
+			<h3><a href="#"><%= link_to project.title, project %></a></h3>
+			<p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
+			<% end %>
+		</div>
 	</div>
-	<!--PROJECTS-->
-	<div class="col-2 homepage_content">
-		<h2>Stuff I've Built</h2>
-		<hr>
-		<% @projects.each do |project| %>
-		<h3><a href="#"><%= link_to project.title, project %></a></h3>
-		<p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
-		<% end %>
-	</div>
-</div>
-<!--SKILLS-->
-<div id="skills" style="text-align: center;">
-	<hr style="width: 100%">
-	<h2>MY SKILLS</h2>
-	<hr style="width: 100%">
-	<div id="posts_wrapper" class="skinny_wrapper">
-		<ul class="skill-list">
-			<li class="skill">
-				<h3>Ruby on Rails</h3>
-				<progress class="skill-1" max="100" value="90">
-					<strong>Skill Level: 50%</strong>
-				</progress>
-			</li>
-			<li class="skill">
-				<h3>HTML 5</h3>
-				<progress class="skill-2" max="100" value="90">
-					<strong>Skill Level: 50%</strong>
-				</progress>
-			</li>
-			
-			<li class="skill">
-				<h3>CSS 3</h3>
-				<progress class="skill-3" max="100" value="85">
-					<strong>Skill Level: 75%</strong>
-				</progress>
-			</li>
-			<li class="skill">
-				<h3>JQuery</h3>
-				<progress class="skill-4" max="100" value="75">
-					<strong>Skill Level: 25%</strong>
-				</progress>
-			</li>
-			<li class="skill">
-				<h3>Angular</h3>
-				<progress class="skill-5" max="100" value="70">
-					<strong>Skill Level: 25%</strong>
-				</progress>
-			</li>
-			<li class="skill">
-				<h3>Ember</h3>
-				<progress class="skill-6" max="100" value="65">
-					<strong>Skill Level: 25%</strong>
-				</progress>
-			</li>
-			<li class="skill">
-				<h3>Sinatra</h3>
-				<progress class="skill-7" max="100" value="65">
-					<strong>Skill Level: 25%</strong>
-				</progress>
-			</li>
-			<li class="skill">
-				<h3>C#</h3>
-				<progress class="skill-8" max="100" value="50">
-					<strong>Skill Level: 25%</strong>
-				</progress>
-			</li>
-		</ul>
+	<!--SKILLS-->
+	<div id="skills" style="text-align: center;">
+		<hr style="width: 100%">
+		<h2>MY SKILLS</h2>
+		<hr style="width: 100%">
+		<div id="posts_wrapper" class="skinny_wrapper">
+			<ul class="skill-list">
+				<li class="skill">
+					<h3>Ruby on Rails</h3>
+					<progress class="skill-1" max="100" value="90">
+						<strong>Skill Level: 50%</strong>
+					</progress>
+				</li>
+				<li class="skill">
+					<h3>HTML 5</h3>
+					<progress class="skill-2" max="100" value="90">
+						<strong>Skill Level: 50%</strong>
+					</progress>
+				</li>
+				
+				<li class="skill">
+					<h3>CSS 3</h3>
+					<progress class="skill-3" max="100" value="85">
+						<strong>Skill Level: 75%</strong>
+					</progress>
+				</li>
+				<li class="skill">
+					<h3>JQuery</h3>
+					<progress class="skill-4" max="100" value="75">
+						<strong>Skill Level: 25%</strong>
+					</progress>
+				</li>
+				<li class="skill">
+					<h3>Angular</h3>
+					<progress class="skill-5" max="100" value="70">
+						<strong>Skill Level: 25%</strong>
+					</progress>
+				</li>
+				<li class="skill">
+					<h3>Ember</h3>
+					<progress class="skill-6" max="100" value="65">
+						<strong>Skill Level: 25%</strong>
+					</progress>
+				</li>
+				<li class="skill">
+					<h3>Sinatra</h3>
+					<progress class="skill-7" max="100" value="65">
+						<strong>Skill Level: 25%</strong>
+					</progress>
+				</li>
+				<li class="skill">
+					<h3>C#</h3>
+					<progress class="skill-8" max="100" value="50">
+						<strong>Skill Level: 25%</strong>
+					</progress>
+				</li>
+			</ul>
+		</div>
 	</div>
 </div>
