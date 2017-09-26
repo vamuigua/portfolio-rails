@@ -1,5 +1,6 @@
 <div id="post_show_content" class="skinny_wrapper wrapper_padding">
 	<header>
+		<%= image_tag @post.postimage_url.to_s, id:'post_image'%>
 		<p class="date"><%= @post.created_at.strftime('%A, %B %d') %></p>
 		<h1><%= @post.title %></h1>
 		<hr>

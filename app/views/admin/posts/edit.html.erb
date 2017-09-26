@@ -17,6 +17,13 @@
 	<br>
 	<br>
 
+
+	<%= f.label :postimage, "Post Picture"%><br>
+	<%= f.file_field :postimage,:required => true%>
+
+	<br>
+	<br>
+
 	<%= f.label :content,"Write your article here" %><br>
 	<%= f.text_area :content%>
 
