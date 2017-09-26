@@ -15,6 +15,7 @@
 //= require_tree .
 //= require jquery
 //= require jquery_ujs
+//= require welcome.js
 //= require_tree .
 
 /****NAVIGATION BAR CLICK FUNCTION(on Mobile)***************/
@@ -63,5 +64,4 @@ jQuery(document).ready(function($) {
             scrollTop: 0,
         }, scroll_top_duration);
     });
-
 });
