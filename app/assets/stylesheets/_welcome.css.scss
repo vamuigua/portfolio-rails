@@ -266,11 +266,11 @@ progress, progress[role] {
 }
 
 .skill-7::-webkit-progress-value {
-    background: #87FF69;
+    background: #FF7F00;
 }
 
 .skill-7::-moz-progress-bar {
-    background: #87FF69;
+    background: #FF7F00;
 }
 
 .skill-8::-webkit-progress-value {
@@ -279,6 +279,14 @@ progress, progress[role] {
 
 .skill-8::-moz-progress-bar {
     background: #606FFA;
+}
+
+.skill-9::-webkit-progress-value {
+    background: #24D84B;
+}
+
+.skill-9::-moz-progress-bar {
+    background: #24D84B;
 }
 
 // Animation Keyframes
