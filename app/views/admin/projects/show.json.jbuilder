@@ -1,0 +1,1 @@
+json.extract! @project, :id, :title, :description, :link, :projectimage, :projectimage, :created_at, :updated_at

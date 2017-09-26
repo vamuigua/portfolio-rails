@@ -42,7 +42,7 @@ class Admin::ProjectsController < AdminController
   private
 
   def project_params
-    params.require(:project).permit(:title,:description,:link,:slug)
+    params.require(:project).permit(:title,:description,:link,:projectimage,:slug)
   end
 
   def find_project

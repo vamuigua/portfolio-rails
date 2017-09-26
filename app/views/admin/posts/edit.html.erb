@@ -1,37 +1,29 @@
 <div class="skinny_wrapper wrapper_padding">
-<h1>Edit Post</h1>
-
-<%= form_for @post, url:admin_post_path(@post) do |f| %>
+	<h1>Edit Post</h1>
+	<%= form_for @post, url:admin_post_path(@post) do |f| %>
 	<% if @post.errors.any? %>
-		<h2><%= pluralize(@post.errors.count,"error")%> prevented this post from saving:</h2>
-		<ul>
-			<% @post.errors.full_messages.each do |msg|%>
-			<li><%= msg %></li>
-			<%end%>
-		</ul>
+	<h2><%= pluralize(@post.errors.count,"error")%> prevented this post from saving:</h2>
+	<ul>
+		<% @post.errors.full_messages.each do |msg|%>
+		<li><%= msg %></li>
+		<%end%>
+	</ul>
 	<%end%>
 	
 	<%= f.label :title %><br>
 	<%= f.text_field :title%>
-
 	<br>
 	<br>
-
-
 	<%= f.label :postimage, "Post Picture"%><br>
 	<%= f.file_field :postimage,:required => true%>
-
 	<br>
 	<br>
-
 	<%= f.label :content,"Write your article here" %><br>
 	<%= f.text_area :content%>
-
 	<br>
 	<br>
 	
 	<%= f.submit %>
-	 
-
-<%end%>  
+	
+	<%end%>
 </div>
