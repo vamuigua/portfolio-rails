@@ -72,3 +72,5 @@ gem 'devise', '~> 4.2'
 gem 'jquery-rails'
 #carrierware - img uploadimg
 gem 'carrierwave'
+#font-awesome
+gem "font-awesome-rails"
