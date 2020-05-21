@@ -67,7 +67,7 @@ gem 'mail_form', '~> 1.5', '>= 1.5.1'
 #to securely configure Rails applications
 gem 'figaro', '~> 1.0.0'
 #authentication
-gem 'devise', '~> 4.2'
+gem 'devise', '~> 4.7'
 #jquery rails
 gem 'jquery-rails'
 #carrierware - img uploadimg
